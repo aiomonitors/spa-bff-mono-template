@@ -10,6 +10,7 @@ router.get('/', (ctx) => {
   ctx.body = 'Hello World';
 });
 
+
 router.get('/error', (ctx) => {
   ctx.body = {
     instance: '/',
@@ -20,10 +21,16 @@ router.get('/error', (ctx) => {
       reasons: [],
     },
   } satisfies ErrorResponse
+});
+
+router.get('/money-test', (ctx) => {
+  ctx.body = {
+    formattedValue: formatMoney(1000),
+  }
 })
 
 server.use(router.routes());
 
 server.listen(9000, () => {
   console.log('server listening on port 9000')
-})
+});
