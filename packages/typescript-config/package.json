@@ -1,0 +1,11 @@
+{
+  "name": "@aiomonitors-spa/typescript-config",
+  "version": "0.0.0",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "private": true,
+  "publishConfig": {
+    "access": "public"
+  }
+}

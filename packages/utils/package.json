@@ -1,0 +1,37 @@
+{
+  "name": "@aiomonitors-spa/utils",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**"
+  ],
+  "exports": {
+    ".": {
+      "default": "./dist/index.js",
+      "types": "./src/index.ts"
+    },
+    "./money": {
+      "types": "./src/money.ts",
+      "default": "./dist/money.js"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "lint": "eslint src/",
+    "typecheck": "tsc --noEmit",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@aiomonitors-spa/typescript-config": "workspace:*",
+    "@aiomonitors-spa/eslint-config": "workspace:*",
+    "@types/node": "^20.14.9",
+    "tsup": "^8.1.0",
+    "typescript": "^5.5.2"
+  }
+}

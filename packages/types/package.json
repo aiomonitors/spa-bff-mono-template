@@ -1,0 +1,26 @@
+{
+  "name": "@aiomonitors-spa/types",
+  "version": "1.0.0",
+  "description": "",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "lint": "eslint src/",
+    "typecheck": "tsc --noEmit",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@aiomonitors-spa/typescript-config": "workspace:*",
+    "@aiomonitors-spa/eslint-config": "workspace:*",
+    "@types/node": "^20.14.9",
+    "tsup": "^8.1.0",
+    "typescript": "^5.5.2"
+  }
+}

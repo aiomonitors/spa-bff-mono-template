@@ -1,0 +1,11 @@
+{
+  "name": "@aiomonitors-spa/eslint-config",
+  "version": "0.0.0",
+  "private": true,
+  "license": "ISC",
+  "devDependencies": {
+    "@vercel/style-guide": "^6.0.0",
+    "eslint-config-turbo": "^2.0.6",
+    "eslint-plugin-only-warn": "^1.1.0"
+  }
+}
