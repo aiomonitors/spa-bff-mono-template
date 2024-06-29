@@ -32,5 +32,6 @@ router.get('/money-test', (ctx) => {
 server.use(router.routes());
 
 server.listen(9000, () => {
+  // eslint-disable-next-line no-console -- Need to add logging lib
   console.log('server listening on port 9000')
 });
