@@ -6,4 +6,10 @@ export type ErrorResponse = {
     };
     title: string;
     description: string;
-}
+};
+
+export type ProductResponse = {
+    name: string;
+    description: string;
+    amount: string;
+};

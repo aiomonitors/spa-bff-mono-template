@@ -1,6 +1,6 @@
 import Koa from 'koa';
 import Router from '@koa/router';
-import { type ErrorResponse } from '@aiomonitors-spa/types';
+import { type ProductResponse, type ErrorResponse } from '@aiomonitors-spa/types';
 import { formatMoney } from '@aiomonitors-spa/utils/money';
 
 const server = new Koa();
@@ -25,13 +25,15 @@ router.get('/error', (ctx) => {
 
 router.get('/money-test', (ctx) => {
   ctx.body = {
-    formattedValue: formatMoney(1000),
-  }
+    name: 'Test Product',
+    description: 'This is a test product',
+    amount: formatMoney(1000),
+  } satisfies ProductResponse
 })
 
 server.use(router.routes());
 
 server.listen(9000, () => {
-  // eslint-disable-next-line no-console -- Need to add logging lib
+  // eslint-disable-next-line no-console -- Need to add logging
   console.log('server listening on port 9000')
 });
