@@ -1,7 +1,7 @@
 export const formatMoney = (
   amount?: number,
   formatMissingValue = true,
-) => {
+): string => {
   if (!amount && formatMissingValue) {
     return '$0'
   }
@@ -9,6 +9,6 @@ export const formatMoney = (
   if (!amount && !formatMissingValue) {
     throw new Error('Amount cannot be formatted');
   }
-
-  return `$${amount?.toLocaleString()}`
+  
+  return `$${amount?.toLocaleString() ?? ''}`;
 };
