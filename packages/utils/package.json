@@ -22,15 +22,22 @@
     "dev": "tsup --watch",
     "lint": "eslint src/",
     "typecheck": "tsc --noEmit",
-    "test": "jest"
+    "test": "jest --passWithNoTests --coverage",
+    "test:watch": "jest --watchAll"
+  },
+  "jest": {
+    "preset": "@aiomonitors-spa/jest-config/node"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@aiomonitors-spa/typescript-config": "workspace:*",
     "@aiomonitors-spa/eslint-config": "workspace:*",
+    "@aiomonitors-spa/jest-config": "workspace:*",
+    "@aiomonitors-spa/typescript-config": "workspace:*",
+    "@types/jest": "^29.5.12",
     "@types/node": "^20.14.9",
+    "jest": "^29.7.0",
     "tsup": "^8.1.0",
     "typescript": "^5.5.2"
   }
