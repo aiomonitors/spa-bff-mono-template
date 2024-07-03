@@ -1,12 +1,21 @@
 import React from 'react';
 
-export function Button(): JSX.Element {
+type ButtonProps = {
+  onClick?: () => unknown;
+} & React.ButtonHTMLAttributes<HTMLButtonElement>;
+
+export function Button({
+  onClick,
+  children,
+  ...restProps
+}: ButtonProps): JSX.Element {
   return (
     <button
-      type="button"
-      onClick={() => null}
+      type='button'
+      onClick={onClick}
+      {...restProps}
     >
-      This is a button
+      {children}
     </button>
   )
 }
