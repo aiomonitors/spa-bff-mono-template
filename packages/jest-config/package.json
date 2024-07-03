@@ -1,0 +1,15 @@
+{
+  "name": "@aiomonitors-spa/jest-config",
+  "version": "1.0.0",
+  "files": [
+    "node/jest-config.js",
+    "browser/jest-config.js"
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "ts-jest": "^29.1.5"
+  },
+  "devDependencies": {
+    "jest-environment-jsdom": "^29.7.0"
+  }
+}
