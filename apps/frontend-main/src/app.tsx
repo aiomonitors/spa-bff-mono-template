@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Header } from '@aiomonitors-spa/frontend-core';
+import { Header, Button } from '@aiomonitors-spa/frontend-core';
 import viteLogo from "../public/vite.svg";
 import reactLogo from './assets/react.svg'
 import './App.css'
@@ -20,9 +20,9 @@ function App(): ReturnType<React.FC> {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button type="button" onClick={() => { setCount((prevCount) => prevCount + 1); }}>
+        <Button type="button" onClick={() => { setCount((prevCount) => prevCount + 1); }}>
           count is {count}
-        </button>
+        </Button>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
